@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<h1>Kalkulator Lingkaran</h1>
+	<form>
+		<label>Input jari-jari lingkaran:</label>
+		<input type="number" id="jari-jari">
+		<br><br>
+		<button type="button" onclick="hitung()">Hitung</button>
+	</form>
+	<br><br>
+	<p>Luas lingkaran: <span id="luas"></span></p>
+	<p>Keliling lingkaran: <span id="keliling"></span></p>
+
+	<script>
+		function hitung() {
+			// Mengambil nilai jari-jari dari input
+			var r = parseFloat(document.getElementById("jari-jari").value);
+
+            var phi = 22 / 7;
+
+			// Menghitung luas lingkaran
+			var luas = phi * r * r;
+
+			// Menghitung keliling lingkaran
+			var keliling = phi * 2 * r;
+
+			// Menampilkan hasil kalkulasi pada halaman
+			document.getElementById("luas").innerHTML = luas.toFixed(2);
+			document.getElementById("keliling").innerHTML = keliling.toFixed(2);
+		}
+	</script>
+</body>
+</html>
